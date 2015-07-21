@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -i --workdir /go/src/github.com/pythonandchips/piper-alpha -v `pwd`:/go/src/github.com/pythonandchips/piper-alpha -v `pwd`/vendor:/go/src docker.pythonandchips.net/go $@

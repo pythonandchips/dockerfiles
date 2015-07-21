@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker rm -f spotify
+
+docker run -d -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY -v /dev/snd:/dev/snd --privileged --name spotify jess/spotify

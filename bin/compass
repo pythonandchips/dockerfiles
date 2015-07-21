@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo `pwd`
+
+docker run -it -v `pwd`:/data docker.pythonandchips.net/compass sass --watch --sourcemap=inline --compass main.scss:main.css

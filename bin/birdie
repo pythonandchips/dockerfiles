@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker rm -f birdie
+
+docker run -it --net host -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix:0 -v /dev/snd:/dev/snd --privileged --name birdie docker.pythonandchips.net/birdie

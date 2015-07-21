@@ -1,0 +1,8 @@
+#!/bin/bash
+
+docker run -i --rm \
+  -v `pwd`:/root/workspace \
+  -v /home/colin/.vim/bundle:/home/colin/.vim/bundle \
+  -v $HOME/.ssh:/root/.ssh \
+  -v $HOME/.gitconfig:/root/.gitconfig \
+  docker.pythonandchips.net/git $@

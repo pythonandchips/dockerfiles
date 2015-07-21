@@ -1,0 +1,9 @@
+#!/bin/bash
+
+touch /var/log/goimports/goimports.log
+echo "RUNNING IMPORT" >> /var/log/goimports/goimports.log
+echo $@ >> /var/log/goimports/goimports.log
+
+docker run -v $1:$1 -v `pwd`/vendor:/go/src \
+docker.pythonandchips.net/goimports $1
+

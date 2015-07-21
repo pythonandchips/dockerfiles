@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo $@ >> /var/log/ctags/ctags.log
+
+docker run -i -v `pwd`:`pwd` docker.pythonandchips.net/ctags $@

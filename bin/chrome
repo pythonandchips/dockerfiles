@@ -1,0 +1,5 @@
+#!/bin/bash
+
+docker rm -f chrome
+
+docker run -d --net host -v $HOME/.ssh:/root/.ssh -v /tmp/.X11-unix:/tmp/.X11-unix -v /dev/dri:/dev/dri -e DISPLAY=unix$DISPLAY -v $HOME/downloads:/root/Downloads -v $HOME/.chrome/:/data -v /dev/snd:/dev/snd --privileged --name chrome jess/chrome
